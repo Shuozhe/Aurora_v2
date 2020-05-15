@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class ExampleShipControl : MonoBehaviour
 {
@@ -17,7 +18,20 @@ public class ExampleShipControl : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+    Gamepad gp = null;
+    foreach (var device in InputSystem.devices)
+    {
+      if (device is Gamepad)
+      {
+        gp = device as Gamepad;
+        break;
+      }
+    }
 
+    if (gp != null)
+    {
+      gp.leftStick.ReadValue();
+    }
 
     if (Input.GetKeyDown(KeyCode.Escape))
     {
@@ -27,12 +41,11 @@ public class ExampleShipControl : MonoBehaviour
     }
 
 
-
     if (Input.GetKey(KeyCode.W))
     {
       GetComponent<Rigidbody2D>().AddForce(transform.up * acceleration_amount * Time.deltaTime);
-
     }
+
     if (Input.GetKey(KeyCode.S))
     {
       GetComponent<Rigidbody2D>().AddForce((-transform.up) * acceleration_amount * Time.deltaTime);
