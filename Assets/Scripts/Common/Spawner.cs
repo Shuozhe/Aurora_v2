@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-  public Color gizemoColor = Color.red;
+  public Color gizmoColor = Color.red;
 
   public enum SpawnType
-  { }
+  {
+    Once,
+    Timer,
+  }
 
   // Start is called before the first frame update
   void Start()
