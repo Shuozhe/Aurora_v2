@@ -5651,7 +5651,6 @@ GameObject:
   - component: {fileID: 8106155510135880866}
   - component: {fileID: 8106155510135880865}
   - component: {fileID: 8106155510135880864}
-  - component: {fileID: 8106155510135880871}
   - component: {fileID: 8106155510135880867}
   m_Layer: 0
   m_Name: Player
@@ -5748,22 +5747,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8106155510135880871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8106155510135880870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd1b717e3e89ca541a5ccaedc5c46cc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration_amount: 38
-  rotation_speed: 29
-  turret: {fileID: 8106155508619578100}
-  turret_rotation_speed: 3
 --- !u!60 &8106155510135880867
 PolygonCollider2D:
   m_ObjectHideFlags: 0

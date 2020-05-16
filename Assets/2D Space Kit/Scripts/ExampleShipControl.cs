@@ -9,30 +9,11 @@ public class ExampleShipControl : MonoBehaviour
   public float rotation_speed = 1f;
   public GameObject turret;
   public float turret_rotation_speed = 3f;
-  // Use this for initialization
-  void Start()
-  {
-
-  }
+  public Vector2 movement_ = Vector2.zero;
 
   // Update is called once per frame
   void Update()
   {
-    Gamepad gp = null;
-    foreach (var device in InputSystem.devices)
-    {
-      if (device is Gamepad)
-      {
-        gp = device as Gamepad;
-        break;
-      }
-    }
-
-    if (gp != null)
-    {
-      gp.leftStick.ReadValue();
-    }
-
     if (Input.GetKeyDown(KeyCode.Escape))
     {
       Cursor.visible = !Cursor.visible;
