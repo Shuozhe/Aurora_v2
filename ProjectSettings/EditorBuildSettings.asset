@@ -6,14 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 0be5e6d294fdc6247b99e33eead249b0
+    path: Assets/Scenes/ButtonRemapScreen.unity
+    guid: 6d897b03f2c393542b51d405e97f9f92
   - enabled: 1
-    path: Assets/Scenes/MainGame.unity
-    guid: 33337d62a53252b4482201f2ad7ece60
-  - enabled: 1
-    path: Assets/2D Space Kit/Example Scene/Demo.unity
-    guid: f248b8ef3bed796479c555bf28de8e41
-  m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: 5a9ffc1f185f63d48a3e3456363b38bd,
-      type: 2}
+    path: Assets/Scenes/NewInput.unity
+    guid: 37961ba4d27bd46428d20c2ffe403dc3
+  m_configObjects: {}
