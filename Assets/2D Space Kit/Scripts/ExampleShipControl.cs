@@ -65,9 +65,5 @@ public class ExampleShipControl : MonoBehaviour
     {
       transform.position = new Vector3(0, 0, 0);
     }
-
-
-
-
   }
 }

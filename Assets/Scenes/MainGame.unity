@@ -697,28 +697,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1137216999}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Script: {fileID: 11500000, guid: 258223a0f1bc11d4aa3abe53ac95853f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 9bf1f288a5223a344ac6b25488e4dc73,
-    type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Gamepad
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 1954268335}
 --- !u!114 &1137217001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,6 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7a111241e49e14397f1acca0d69c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_: {fileID: 0}
 --- !u!1001 &1430594304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -810,9 +792,3 @@ PrefabInstance:
       objectReference: {fileID: 1133986392}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d806ea6fa0b235447a419de6f449dd2b, type: 3}
---- !u!20 &1954268335 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 5469655394199240425, guid: d806ea6fa0b235447a419de6f449dd2b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1430594304}
-  m_PrefabAsset: {fileID: 0}

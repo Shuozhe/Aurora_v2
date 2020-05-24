@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/_Unity/Aurora.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/_Unity/Controller.inputactions'
 
 using System;
 using System.Collections;
@@ -8,13 +8,13 @@ using UnityEngine.InputSystem.Utilities;
 
 namespace Generated
 {
-    public class @Aurora : IInputActionCollection, IDisposable
+    public class @Controller : IInputActionCollection, IDisposable
     {
         public InputActionAsset asset { get; }
-        public @Aurora()
+        public @Controller()
         {
             asset = InputActionAsset.FromJson(@"{
-    ""name"": ""Aurora"",
+    ""name"": ""Controller"",
     ""maps"": [
         {
             ""name"": ""Player"",
@@ -76,7 +76,7 @@ namespace Generated
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Gamepad"",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1038,8 +1038,8 @@ namespace Generated
         private readonly InputAction m_Player_ToggleMouseMode;
         public struct PlayerActions
         {
-            private @Aurora m_Wrapper;
-            public PlayerActions(@Aurora wrapper) { m_Wrapper = wrapper; }
+            private @Controller m_Wrapper;
+            public PlayerActions(@Controller wrapper) { m_Wrapper = wrapper; }
             public InputAction @Move => m_Wrapper.m_Player_Move;
             public InputAction @Look => m_Wrapper.m_Player_Look;
             public InputAction @Fire => m_Wrapper.m_Player_Fire;
@@ -1115,8 +1115,8 @@ namespace Generated
         private readonly InputAction m_UI_TrackedDeviceOrientation;
         public struct UIActions
         {
-            private @Aurora m_Wrapper;
-            public UIActions(@Aurora wrapper) { m_Wrapper = wrapper; }
+            private @Controller m_Wrapper;
+            public UIActions(@Controller wrapper) { m_Wrapper = wrapper; }
             public InputAction @Navigate => m_Wrapper.m_UI_Navigate;
             public InputAction @Submit => m_Wrapper.m_UI_Submit;
             public InputAction @Cancel => m_Wrapper.m_UI_Cancel;
