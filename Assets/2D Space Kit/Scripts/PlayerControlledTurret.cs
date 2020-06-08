@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerControlledTurret : MonoBehaviour
+public class PlayerControlledTurret : MonoBehaviour, IFireable
 {
   public GameObject weapon_prefab;
   public GameObject[] barrel_hardpoints;
@@ -19,14 +19,17 @@ public class PlayerControlledTurret : MonoBehaviour
     transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.LerpAngle(transform.rotation.eulerAngles.z, (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) - 90f, turret_rotation_speed * Time.deltaTime)));
   }
 
-  public void Fire()
+  public void Fire(float strength = 1)
   {
-    GameObject bullet = (GameObject)Instantiate(weapon_prefab, barrel_hardpoints[barrel_index].transform.position, transform.rotation);
-    bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.up * shot_speed);
-    bullet.GetComponent<Projectile>().firing_ship = transform.parent.gameObject;
-    barrel_index++; //This will cycle sequentially through the barrels in the barrel_hardpoints array
+    if (strength > 0)
+    {
+      GameObject bullet = (GameObject)Instantiate(weapon_prefab, barrel_hardpoints[barrel_index].transform.position, transform.rotation);
+      bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.up * shot_speed);
+      bullet.GetComponent<Projectile>().firing_ship = transform.parent.gameObject;
+      barrel_index++; //This will cycle sequentially through the barrels in the barrel_hardpoints array
 
-    if (barrel_index >= barrel_hardpoints.Length)
-      barrel_index = 0;
+      if (barrel_index >= barrel_hardpoints.Length)
+        barrel_index = 0;
+    }
   }
 }

@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private Controller controls_;
   [SerializeField] private Rigidbody2D player_;
 
-  private PlayerControlledTurret[] turrets_;
+  private PlayerControlledTurret[] turrets_ = new PlayerControlledTurret[0];
 
   private Vector2 look_ = Vector2.zero;
   private Vector2 move_ = Vector2.zero;

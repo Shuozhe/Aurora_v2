@@ -30,6 +30,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "FireSecondary",
+                    "type": "Button",
+                    "id": "a9fae01f-19cf-4961-a9c5-dc0c7354f118",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "Brake",
                     "type": "Button",
                     "id": "b2a4e6cb-1782-4b9f-9450-8d6772449aeb",
@@ -371,6 +379,28 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "ToggleMouseMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8b941546-aea3-4dab-acdc-693619c11897",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FireSecondary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c88e51bc-2d7d-436e-bedb-f93ff29a1919",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FireSecondary",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

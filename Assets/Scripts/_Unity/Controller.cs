@@ -45,6 +45,14 @@ namespace Generated
                     ""interactions"": """"
                 },
                 {
+                    ""name"": ""FireSecondary"",
+                    ""type"": ""Button"",
+                    ""id"": ""a9fae01f-19cf-4961-a9c5-dc0c7354f118"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""Brake"",
                     ""type"": ""Button"",
                     ""id"": ""b2a4e6cb-1782-4b9f-9450-8d6772449aeb"",
@@ -386,6 +394,28 @@ namespace Generated
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""ToggleMouseMode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8b941546-aea3-4dab-acdc-693619c11897"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireSecondary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c88e51bc-2d7d-436e-bedb-f93ff29a1919"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireSecondary"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -966,6 +996,7 @@ namespace Generated
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
             m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
             m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
+            m_Player_FireSecondary = m_Player.FindAction("FireSecondary", throwIfNotFound: true);
             m_Player_Brake = m_Player.FindAction("Brake", throwIfNotFound: true);
             m_Player_LookAbs = m_Player.FindAction("LookAbs", throwIfNotFound: true);
             m_Player_ToggleMouseMode = m_Player.FindAction("ToggleMouseMode", throwIfNotFound: true);
@@ -1033,6 +1064,7 @@ namespace Generated
         private readonly InputAction m_Player_Move;
         private readonly InputAction m_Player_Look;
         private readonly InputAction m_Player_Fire;
+        private readonly InputAction m_Player_FireSecondary;
         private readonly InputAction m_Player_Brake;
         private readonly InputAction m_Player_LookAbs;
         private readonly InputAction m_Player_ToggleMouseMode;
@@ -1043,6 +1075,7 @@ namespace Generated
             public InputAction @Move => m_Wrapper.m_Player_Move;
             public InputAction @Look => m_Wrapper.m_Player_Look;
             public InputAction @Fire => m_Wrapper.m_Player_Fire;
+            public InputAction @FireSecondary => m_Wrapper.m_Player_FireSecondary;
             public InputAction @Brake => m_Wrapper.m_Player_Brake;
             public InputAction @LookAbs => m_Wrapper.m_Player_LookAbs;
             public InputAction @ToggleMouseMode => m_Wrapper.m_Player_ToggleMouseMode;
@@ -1064,6 +1097,9 @@ namespace Generated
                     @Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                     @Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                     @Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
+                    @FireSecondary.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireSecondary;
+                    @FireSecondary.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireSecondary;
+                    @FireSecondary.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireSecondary;
                     @Brake.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBrake;
                     @Brake.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBrake;
                     @Brake.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBrake;
@@ -1086,6 +1122,9 @@ namespace Generated
                     @Fire.started += instance.OnFire;
                     @Fire.performed += instance.OnFire;
                     @Fire.canceled += instance.OnFire;
+                    @FireSecondary.started += instance.OnFireSecondary;
+                    @FireSecondary.performed += instance.OnFireSecondary;
+                    @FireSecondary.canceled += instance.OnFireSecondary;
                     @Brake.started += instance.OnBrake;
                     @Brake.performed += instance.OnBrake;
                     @Brake.canceled += instance.OnBrake;
@@ -1254,6 +1293,7 @@ namespace Generated
             void OnMove(InputAction.CallbackContext context);
             void OnLook(InputAction.CallbackContext context);
             void OnFire(InputAction.CallbackContext context);
+            void OnFireSecondary(InputAction.CallbackContext context);
             void OnBrake(InputAction.CallbackContext context);
             void OnLookAbs(InputAction.CallbackContext context);
             void OnToggleMouseMode(InputAction.CallbackContext context);
