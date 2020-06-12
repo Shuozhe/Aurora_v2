@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Canon : MonoBehaviour
+public class Canon : MonoBehaviour, IFireable
 {
-  // Start is called before the first frame update
-  void Start()
-  {
+  [SerializeField]
+  GameObject projectile;
 
+  float timer = 0;
+
+  public void Fire(float strength = 1)
+  {
+    if (projectile)
+    {
+      Instantiate(projectile, gameObject.transform);
+    }
   }
 
-  // Update is called once per frame
   void Update()
   {
 

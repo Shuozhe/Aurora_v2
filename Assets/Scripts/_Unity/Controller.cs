@@ -414,7 +414,7 @@ namespace Generated
                     ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""FireSecondary"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false

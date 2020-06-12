@@ -27,11 +27,13 @@ public class PlayerController : MonoBehaviour
     controls_.Player.Move.performed += HandleMove;
     controls_.Player.Look.performed += HandleLook;
     controls_.Player.Fire.performed += HandleFire;
+    controls_.Player.FireSecondary.performed += HandleFireSecondary;
     controls_.Player.Brake.performed += HandleBrake;
 
     controls_.Player.Move.Enable();
     controls_.Player.Look.Enable();
     controls_.Player.Fire.Enable();
+    controls_.Player.FireSecondary.Enable();
     controls_.Player.Brake.Enable();
 
     player_ = GetComponent<Rigidbody2D>();
@@ -69,6 +71,12 @@ public class PlayerController : MonoBehaviour
   }
 
   private void HandleFire(InputAction.CallbackContext context)
+  {
+    foreach (var turret in turrets_)
+      turret.Fire();
+  }
+
+  private void HandleFireSecondary(InputAction.CallbackContext context)
   {
     foreach (var turret in turrets_)
       turret.Fire();

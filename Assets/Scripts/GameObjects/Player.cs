@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+  List<IFireable> weapons_;
+
   void Start()
   {
     var controller = GetComponent<PlayerController>();
@@ -13,8 +15,11 @@ public class Player : MonoBehaviour
     controller.AddTurrets(turret);
   }
 
-  void Update()
+  private void OnGUI()
   {
-
+    if (GUILayout.Button("Press Me"))
+      Debug.Log("Hello!");
   }
+
+  
 }
